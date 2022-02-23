@@ -1,7 +1,14 @@
 import React from 'react';
+import './App.css';
 
 const App = () => {
-  return <h1 title='This works!'>Hi, this is ReactJS!</h1>; //translate to => React.createElement('h1', {title:'This Works!'}, 'Hi, this is ReactJS!')
+  return <div>
+    <h2>Cours Goals</h2>
+    <ul className='goal-list'>
+      <li>Finish the Cours</li>
+      <li>Learn all about the Cours Main Topic</li>
+    </ul>
+  </div>
 };
 
 export default App;
