@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
+import GoalList from './components/GoalList';
 
 const App = () => {
-  return <div>
+  return <div className='course-goals'>
     <h2>Cours Goals</h2>
-    <ul className='goal-list'>
-      <li>Finish the Cours</li>
-      <li>Learn all about the Cours Main Topic</li>
-    </ul>
+    <GoalList />
   </div>
 };
 
