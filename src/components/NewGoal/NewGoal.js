@@ -1,23 +1,25 @@
-import React from "react";
+import React from 'react';
+
 import './NewGoal.css';
 
 const NewGoal = props => {
-    const addGoalHabndler = event => {
-        event.preventDeafault();
+  const addGoalHandler = event => {
+    event.preventDefault();
 
-        const newGoal = {
-            id: Math.random().toString(),
-            text: 'My new goal'
-        };
-
-        props.onAddGoal(newGoal);
+    const newGoal = {
+      id: Math.random().toString(),
+      text: 'My new goal!'
     };
 
-    return <form className="new-goal" onSubmit={addGoalHabndler}>
-        <input type='text' />
-        <button type="submit">Add Goal</button>
-    </form>
-};
+    props.onAddGoal(newGoal);
+  };
 
+  return (
+    <form className="new-goal" onSubmit={addGoalHandler}>
+      <input type="text" />
+      <button type="submit">Add Goal</button>
+    </form>
+  );
+};
 
 export default NewGoal;
